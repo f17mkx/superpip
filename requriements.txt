@@ -2,3 +2,5 @@ twine
 tqdm
 setuptools
 wheel
+requests-toolbelt
+importlib_metadata

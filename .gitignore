@@ -1,0 +1,6 @@
+/superpro.egg-info/
+/dist/
+build/
+.idea/
+*.pyc
+/__pycache__/

@@ -2,6 +2,8 @@
 # https://dzone.com/articles/executable-package-pip-install
 # pipreqs --force # generate requirements.txt https://stackoverflow.com/questions/31684375/automatically-create-requirements-txt
 version="0.4.5"
+gh release delete version -y
+version="0.4.6"
 python update.py $version
 
 git add .

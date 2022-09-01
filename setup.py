@@ -8,8 +8,8 @@ with open("README.md", "r") as fh:
 
 
 setuptools.setup(
-     name='superpro',
-     version='0.4.4',
+     name="superpro",
+     version="0.4.5",
      # version=version,
      scripts=[],
      author="Stefan Volk",

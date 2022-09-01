@@ -23,6 +23,12 @@ def load_from_filename(filename):
     file.close()
     return loaded
 
+def load_from_dir(filename):
+    file = open(filename, 'r')
+    loaded = file.read()
+    file.close()
+    return loaded
+
 def pbpaste():
     out=[]
     pbpaste = subprocess.run(

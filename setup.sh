@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 # https://dzone.com/articles/executable-package-pip-install
-version="0.4.2"
+# pipreqs --force # generate requirements.txt https://stackoverflow.com/questions/31684375/automatically-create-requirements-txt
+version="0.4.4"
 git add .
-git commit -m "build version$version"
+git commit -m "release $version"
 git push
-gh release create $version --title "$version" --notes "**new functions**\n- printl\n- files_in_dir\n- files_in_dir_ending\n"
+gh release create $version --title "$version" --notes "**new functions**
+- printl
+- files_in_dir
+- files_in_dir_ending"
 
 #python setup.py bdist_wheel "$version"
 python setup.py bdist_wheel

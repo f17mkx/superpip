@@ -1,4 +1,5 @@
 import subprocess
+import os
 
 def save_list_2_filename(list2save, filename):
     file = open(filename, 'w')
@@ -11,7 +12,18 @@ def save_str_2_filename(str2save, filename):
     file.write(str2save)
     file.close()
 
+def save_to_dir(str2save, filename):
+    file = open(filename, 'w')
+    file.write(str2save)
+    file.close()
+
 def load_from_filename(filename):
+    file = open(filename, 'r')
+    loaded = file.read()
+    file.close()
+    return loaded
+
+def load_from_dir(filename):
     file = open(filename, 'r')
     loaded = file.read()
     file.close()
@@ -41,15 +53,13 @@ def pbcopy(str_2_pb):
         # check=True
     )
 
-def load_from_dir(filename):
-    file = open(filename, 'r')
-    loaded = file.read()
-    file.close()
-    return loaded
+def files_in_dir_ending(target_dir:str, ending:str) -> list:
+    return [filename for filename in os.listdir(target_dir) if filename.endswith( '.' + ending)]
 
+def files_in_dir(target_dir:str) -> list:
+    return [filename for filename in os.listdir(target_dir) if not filename.startswith('.')]
 
-def save_to_dir(str2save, filename):
-    file = open(filename, 'w')
-    file.write(str2save)
-    file.close()
-
+def printl(list_2_print:list, n:int=0) -> print:
+    if not n:
+        n=len(list_2_print)
+    for item in list_2_print[:n]: print(item)

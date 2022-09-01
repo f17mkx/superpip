@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 
 import setuptools
-# import sys
-#
-# version= sys.argv[2]
+
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -11,7 +9,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
      name='superpro',
-     version='0.3',
+     version='0.4.2',
      # version=version,
      scripts=[],
      author="Stefan Volk",
@@ -28,5 +26,4 @@ setuptools.setup(
      ],
  )
 
-if __name__ == "__main__":
-    print(setuptools.find_packages())
+

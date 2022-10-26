@@ -1,6 +1,7 @@
 /superpro.egg-info/
 /dist/
 build/
+test/
 .idea/
 test.ipynb
 *.pyc

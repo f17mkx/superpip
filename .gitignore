@@ -3,6 +3,6 @@
 build/
 test/
 .idea/
-test.ipynb
+!test.ipynb
 *.pyc
 /__pycache__/
